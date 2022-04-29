@@ -19,8 +19,14 @@ class Viajero:
         self.__millasAcum += millas
 
     def canjearMillas(self, millas):
-        if self.__millasAcum >= millas:
-            return self.__millasAcum
+        print("Millas acumuladas:{}".format(self.__millasAcum))
+        print("Millas a canjear: {}".format(millas))
+        if(self.__millas_acum<millas):
+            print("Millas insuficientes")
         else:
-            print("No tiene suficientes millas acumuladas.")
+            self.__millasAcum = self.__millasAcum - millas
+            print("".center(20,"-"))
+            print("Millas canjeadas.\n")
+            print("Millas totales: {}".format(self.__millasAcum))
+            print("".center(20,"-"))
     

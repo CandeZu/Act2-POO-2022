@@ -25,4 +25,8 @@ class ManejadorViajero:
                 self.__listaViajeros.append(viajero)
         archivo.close()
 
+    def ListarViajeros(self):
+        for viajero in enumerate(self.__listaViajeros):
+            print(viajero)
+            print("\n".center(20,"-"))
 

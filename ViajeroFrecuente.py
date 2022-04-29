@@ -14,7 +14,10 @@ class Viajero:
     
     def __str__(self):
         return "Numero de viajero: {}\nDNI: {}\nNombre: {}\nApellido: {}\nMillas acumuladas: {}".format(self.__numViajero, self.__dni, self.__nombre, self.__apellido, self.__millasAcum)
-        
+    
+    def getnumViajero(self):
+        return self.__numViajero
+
     def cantidadMillas(self):
         return self.__millasAcum
     

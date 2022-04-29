@@ -30,11 +30,17 @@ class ManejadorViajero:
             print(viajero)
             print("\n".center(20,"-"))
 
-    def BuscarViajero(self, numViajero):
-        i=0
+    # def Buscar(self,NroViaj):
+    #         i = 0
+    #         while(self.__listaViajeros[i].getnumViajero() != NroViaj):
+    #             i += 1
+    #         ViajeroEncontrado= self.__listaViajeros[i]
+    #         print("VIAJERO ENCONTRADO:")
+    #         print(ViajeroEncontrado)
+    #         return ViajeroEncontrado
+    def Buscar(self, numViajero):
         for viajero in self.__listaViajeros:
-            while(viajero.numViajero != numViajero):
-                i+=1
-        viajeroEncontrado = self.__listaViajeros[i]
-        print("Viajero encontrados: {}".format(viajeroEncontrado))
-        return viajeroEncontrado
+            if viajero.getnumViajero() == numViajero:
+                return viajero
+        return None
+    

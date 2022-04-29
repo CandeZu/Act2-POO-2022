@@ -5,6 +5,9 @@ import os
 if __name__=='__main__':
     lista = ManejadorViajero()
     lista.GenerarLista()
+    lista.ListarViajeros()
+    NroViaj= int(input("Ingrese nro de viajero del cual desea consultar\n"))
+    Viajero= lista.Buscar(NroViaj)
     
     continuar = True
 

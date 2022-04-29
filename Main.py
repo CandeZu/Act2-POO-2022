@@ -1,7 +1,10 @@
+from ManejadorViajero import ManejadorViajero
 from ViajeroFrecuente import Viajero
 import os
 
 if __name__=='__main__':
+    lista = ManejadorViajero()
+    lista.GenerarLista()
     
     continuar = True
 

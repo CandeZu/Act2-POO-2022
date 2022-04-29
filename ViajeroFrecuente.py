@@ -5,13 +5,16 @@ class Viajero:
     __apellido = ""
     __millasAcum = 0
 
-    def __init__(self, dni, nombre, apellido):
-        self.__numViajero += 1
+    def __init__(self, numViajero, dni, nombre, apellido, millasAcum):
+        self.__numViajero = numViajero
         self.__dni = dni
         self.__nombre = nombre
         self.__apellido = apellido
-        self.__millasAcum = 0
+        self.__millasAcum = millasAcum
     
+    def __str__(self):
+        return "Numero de viajero: {}\nDNI: {}\nNombre: {}\nApellido: {}\nMillas acumuladas: {}".format(self.__numViajero, self.__dni, self.__nombre, self.__apellido, self.__millasAcum)
+        
     def cantidadMillas(self):
         return self.__millasAcum
     

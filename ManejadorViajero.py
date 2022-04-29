@@ -1,10 +1,10 @@
-from ManejadorViajero import Viajero
+from ViajeroFrecuente import Viajero
 import csv
 
 class ManejadorViajero:
     __listaViajeros = []
 
-    def __init__(self, listaViajeros):
+    def __init__(self):
         self.__listaViajeros = []
     
 
@@ -30,3 +30,11 @@ class ManejadorViajero:
             print(viajero)
             print("\n".center(20,"-"))
 
+    def BuscarViajero(self, numViajero):
+        i=0
+        for viajero in self.__listaViajeros:
+            while(viajero.numViajero != numViajero):
+                i+=1
+        viajeroEncontrado = self.__listaViajeros[i]
+        print("Viajero encontrados: {}".format(viajeroEncontrado))
+        return viajeroEncontrado

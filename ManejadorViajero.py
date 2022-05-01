@@ -25,22 +25,27 @@ class ManejadorViajero:
                 self.__listaViajeros.append(viajero)
         archivo.close()
 
+
     def ListarViajeros(self):
-        for viajero in enumerate(self.__listaViajeros):
+        for viajero in self.__listaViajeros:
             print(viajero)
             print("\n".center(20,"-"))
 
-    # def Buscar(self,NroViaj):
-    #         i = 0
-    #         while(self.__listaViajeros[i].getnumViajero() != NroViaj):
-    #             i += 1
-    #         ViajeroEncontrado= self.__listaViajeros[i]
-    #         print("VIAJERO ENCONTRADO:")
-    #         print(ViajeroEncontrado)
-    #         return ViajeroEncontrado
-    def Buscar(self, numViajero):
-        for viajero in self.__listaViajeros:
-            if viajero.getnumViajero() == numViajero:
-                return viajero
-        return None
-    
+
+    def buscar(self,NroViaj):
+            i = 0
+            while(self.__listaViajeros[i].getnumViajero() != NroViaj):
+                i += 1
+            ViajeroEncontrado= self.__listaViajeros[i]
+            print("VIAJERO ENCONTRADO:")
+            print(ViajeroEncontrado)
+            return ViajeroEncontrado
+
+    def consultarmillas(self,num):
+        return self.buscar(num).cantidadMillas()
+
+    def acumular(self,num,millas):
+        return self.buscar(num).acumularMillas(millas)
+        
+    def canjear(self,num,millasc):
+        return self.buscar(num).canjearMillas(millasc)

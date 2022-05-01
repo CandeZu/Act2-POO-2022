@@ -18,6 +18,15 @@ class Viajero:
     def getnumViajero(self):
         return self.__numViajero
 
+    def getdni(self):
+        return self.__dni
+    
+    def getnombre(self):
+        return self.__nombre
+    
+    def getapellido(self):
+        return self.__apellido
+
     def cantidadMillas(self):
         return self.__millasAcum
     
@@ -27,7 +36,7 @@ class Viajero:
     def canjearMillas(self, millas):
         print("Millas acumuladas:{}".format(self.__millasAcum))
         print("Millas a canjear: {}".format(millas))
-        if(self.__millas_acum<millas):
+        if(self.__millasAcum<millas):
             print("Millas insuficientes")
         else:
             self.__millasAcum = self.__millasAcum - millas
